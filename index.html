@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Ecommerce</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="menu_drawer">
+      <div class="menu_drawer_close">
+        <button onclick="closeDrawer()">
+          <svg class="svg-icon" viewBox="0 0 20 20">
+            <path
+              fill="none"
+              d="M11.469,10l7.08-7.08c0.406-0.406,0.406-1.064,0-1.469c-0.406-0.406-1.063-0.406-1.469,0L10,8.53l-7.081-7.08
+                c-0.406-0.406-1.064-0.406-1.469,0c-0.406,0.406-0.406,1.063,0,1.469L8.531,10L1.45,17.081c-0.406,0.406-0.406,1.064,0,1.469
+                c0.203,0.203,0.469,0.304,0.735,0.304c0.266,0,0.531-0.101,0.735-0.304L10,11.469l7.08,7.081c0.203,0.203,0.469,0.304,0.735,0.304
+                c0.267,0,0.532-0.101,0.735-0.304c0.406-0.406,0.406-1.064,0-1.469L11.469,10z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul class="nav_links_drawer">
+        <li class="nav_link_item_drawer">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav_link_item_drawer">
+          <a href="#">Products</a>
+        </li>
+        <li class="nav_link_item_drawer">
+          <a href="#">About</a>
+        </li>
+        <li class="nav_link_item_drawer">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+    </div>
+
+    <nav class="navbar">
+      <ul class="nav_links">
+        <li class="nav_link_item">
+          <a href="#">Home</a>
+        </li>
+        <li class="nav_link_item">
+          <a href="#">Products</a>
+        </li>
+        <li class="nav_link_item">
+          <a href="#">About</a>
+        </li>
+        <li class="nav_link_item">
+          <a href="#">Contact</a>
+        </li>
+      </ul>
+      <button class="drawer_menu_btn" onclick="openDrawer()">
+        <svg class="svg-icon-menu" viewBox="0 0 20 20">
+          <path
+            fill="none"
+            d="M3.314,4.8h13.372c0.41,0,0.743-0.333,0.743-0.743c0-0.41-0.333-0.743-0.743-0.743H3.314
+                c-0.41,0-0.743,0.333-0.743,0.743C2.571,4.467,2.904,4.8,3.314,4.8z M16.686,15.2H3.314c-0.41,0-0.743,0.333-0.743,0.743
+                s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,15.2,16.686,15.2z M16.686,9.257H3.314
+                c-0.41,0-0.743,0.333-0.743,0.743s0.333,0.743,0.743,0.743h13.372c0.41,0,0.743-0.333,0.743-0.743S17.096,9.257,16.686,9.257z"
+          ></path>
+        </svg>
+      </button>
+      <div>
+        <img
+          src="./images/Clockwise_Logo.png"
+          width="250px"
+          class="logo"
+          alt=""
+        />
+      </div>
+      <div class="cart">
+        <button class="cart_btn" onclick="viewCart()">
+          <svg class="svg-icon" viewBox="0 0 20 20">
+            <path
+              fill="none"
+              d="M17.671,13.945l0.003,0.002l1.708-7.687l-0.008-0.002c0.008-0.033,0.021-0.065,0.021-0.102c0-0.236-0.191-0.428-0.427-0.428H5.276L4.67,3.472L4.665,3.473c-0.053-0.175-0.21-0.306-0.403-0.306H1.032c-0.236,0-0.427,0.191-0.427,0.427c0,0.236,0.191,0.428,0.427,0.428h2.902l2.667,9.945l0,0c0.037,0.119,0.125,0.217,0.239,0.268c-0.16,0.26-0.257,0.562-0.257,0.891c0,0.943,0.765,1.707,1.708,1.707S10,16.068,10,15.125c0-0.312-0.09-0.602-0.237-0.855h4.744c-0.146,0.254-0.237,0.543-0.237,0.855c0,0.943,0.766,1.707,1.708,1.707c0.944,0,1.709-0.764,1.709-1.707c0-0.328-0.097-0.631-0.257-0.891C17.55,14.182,17.639,14.074,17.671,13.945 M15.934,6.583h2.502l-0.38,1.709h-2.312L15.934,6.583zM5.505,6.583h2.832l0.189,1.709H5.963L5.505,6.583z M6.65,10.854L6.192,9.146h2.429l0.19,1.708H6.65z M6.879,11.707h2.027l0.189,1.709H7.338L6.879,11.707z M8.292,15.979c-0.472,0-0.854-0.383-0.854-0.854c0-0.473,0.382-0.855,0.854-0.855s0.854,0.383,0.854,0.855C9.146,15.596,8.763,15.979,8.292,15.979 M11.708,13.416H9.955l-0.189-1.709h1.943V13.416z M11.708,10.854H9.67L9.48,9.146h2.228V10.854z M11.708,8.292H9.386l-0.19-1.709h2.512V8.292z M14.315,13.416h-1.753v-1.709h1.942L14.315,13.416zM14.6,10.854h-2.037V9.146h2.227L14.6,10.854z M14.884,8.292h-2.321V6.583h2.512L14.884,8.292z M15.978,15.979c-0.471,0-0.854-0.383-0.854-0.854c0-0.473,0.383-0.855,0.854-0.855c0.473,0,0.854,0.383,0.854,0.855C16.832,15.596,16.45,15.979,15.978,15.979 M16.917,13.416h-1.743l0.189-1.709h1.934L16.917,13.416z M15.458,10.854l0.19-1.708h2.218l-0.38,1.708H15.458z"
+            ></path>
+          </svg>
+        </button>
+        <span class="cart_indicator">
+          <span class="cart_products_numbers" id="cart_products_numbers">
+            0
+          </span>
+        </span>
+        <div class="cart_items" id="cart_div"></div>
+      </div>
+    </nav>
+    <header class="header">
+      <!-- <div class="ads_carousel">
+        <img src="./images/carousel_img2.jpeg" alt="" />
+      </div> -->
+      <div class="main_cover">
+        <div class="cover_text">
+          <h1 class="cover_text_title">Luxury Watches</h1>
+          <h3 class="cover_text_subTitle">
+            a high-quality, waterproof luxury watch
+          </h3>
+          <div class="cover_btn_div">
+            <a href="#products" class="cover_btn">Shop Now</a>
+          </div>
+        </div>
+        <img src="./images/cover.png" class="cover_img" alt="cover" />
+      </div>
+    </header>
+    <main>
+      <section class="offers_section">
+        <div class="sales">
+          <h2>Exclusives</h2>
+          <a href="#">more >></a>
+        </div>
+        <div class="sales_ads">
+          <img src="./images/1.png" width="30%" alt="" />
+          <img src="./images/2.png" width="30%" alt="" />
+          <img src="./images/3.png" width="30%" alt="" />
+        </div>
+      </section>
+      <section class="payment_section">
+        <h2>Installment Offers</h2>
+        <img src="./images/INSTAL6.gif" width="90%" alt="" />
+      </section>
+      <div id="products" class="products">
+        <h2>Top Sellers</h2>
+        <div class="products_cards_section" id="product_items_div"></div>
+      </div>
+      <section class="brands">
+        <h2>Brands</h2>
+        <div>
+          <img
+            src="./images/brand_1.png"
+            class="brand_img"
+            style="background-color: #fff"
+            alt=""
+          />
+          <img src="./images/brand_2.jpeg" class="brand_img" alt="" />
+          <img src="./images/brand_3.jpeg" class="brand_img" alt="" />
+          <img src="./images/brand_4.jpeg" class="brand_img" alt="" />
+          <img src="./images/brand_5.jpeg" class="brand_img" alt="" />
+          <img src="./images/brand_6.jpeg" class="brand_img" alt="" />
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer_reach">
+        <div>
+          <img src="./images/Clockwise_Logo.png" width="200px" alt="" />
+        </div>
+        <div class="subscribe">
+          <input type="text" placeholder="Enter Email Address" />
+          <button>Male</button>
+          <button>Female</button>
+        </div>
+        <div class="mobile_app_section">
+          <h4>Download Mobile App</h4>
+          <div>
+            <img
+              src="./images/App_Store_(iOS)-Badge-Logo.wine.svg"
+              width="160px"
+              alt=""
+            />
+            <img
+              src="./images/Google_Play-Badge-Logo.wine.svg"
+              width="160px"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="footer_links">
+        <ul>
+          <li><a href="#">Links</a></li>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">About</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">About Clockwise</a></li>
+          <li><a href="#">Link5</a></li>
+          <li><a href="#">Link6</a></li>
+          <li><a href="#">Link7</a></li>
+          <li><a href="#">Link8</a></li>
+          <li><a href="#">Link10</a></li>
+          <li><a href="#">Link9</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Clockwise International</a></li>
+          <li><a href="#">EGY</a></li>
+          <li><a href="#">UAE</a></li>
+          <li><a href="#">KSA</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">Help</a></li>
+          <li><a href="#">Help Center</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Returns & Refunds</a></li>
+          <li><a href="#">Delivery Timelines</a></li>
+        </ul>
+      </div>
+      <div class="line_break"></div>
+      <div class="credintials">
+        <h6>&copy; All Rights are Reserved to IbrahimM.Badr</h6>
+        <div class="payment"></div>
+      </div>
+    </footer>
+    <a href="#" class="back_to_top">
+      <svg class="svg-icon" viewBox="0 0 20 20">
+        <path
+          d="M 13.889 11.611 c -0.17 0.17 -0.443 0.17 -0.612 0 l -3.189 -3.187 l -3.363 3.36 c -0.171 0.171 -0.441 0.171 -0.612 0 c -0.172 -0.169 -0.172 -0.443 0 -0.611 l 3.667 -3.669 c 0.17 -0.17 0.445 -0.172 0.614 0 l 3.496 3.493 C 14.058 11.167 14.061 11.443 13.889 11.611"
+        ></path>
+      </svg>
+    </a>
+    <script src="./script.js" async defer></script>
+  </body>
+</html>
